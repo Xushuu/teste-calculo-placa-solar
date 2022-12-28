@@ -1,0 +1,1 @@
+# teste-calculo-placa-solar
