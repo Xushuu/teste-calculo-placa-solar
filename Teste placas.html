@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Potência</title>
+    <style>
+            input {
+            font:normal 18pt Arial;
+            width: 200px;
+            margin-top: 20px;
+            margin-left: 20px;
+            display: block;
+            padding-left: 5px;
+            text-align: center;
+        }
+        div#res{
+            margin-top: 40px
+        }
+                
+    </style>
+</head>
+<body style="background-color:rgb(130, 218, 240);">
+    <h1 style="text-align: center;">Cálculo de Potência Para Modulos de Energia Fotovoltáica</h1>
+    <img src="https://blog.corsolar.com.br/wp-content/uploads/2023/01/como-funciona-a-placa-solar-770x513.jpg"
+    width="880px"
+    height="400px">
+      <div class="conteiner">
+        
+        </div> 
+    <br><p1>Quantidade de Placas: </p1>
+    <br><input type="number" name="txtn1" id="txtn1"> 
+    <br><p2>Potencia do Módulo: </p2> 
+    <br><input type="number" name="txtn2" id="txtn2">
+    <br><input type="button" value="Calcular" onclick="calc()">
+    <div id="res">Resultado</div>
+<script>
+    function calc() {
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.querySelector('input#txtn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var dif = (n1 * n2 / 1000).toFixed(2)
+        res.innerHTML = `A potencia total do projeto é de <strong>${dif}kW</strong>`
+    }
+</script>
+</body>
+</html>
